@@ -60,6 +60,11 @@
         width: 500px; /* Уменьшаем размер картинки на планшетах */
         height: 500px;
       }
+      .sentence {
+        font-size: 1.2rem;
+        padding-left: 10px; /* Меньше отступов для мобильных устройств */
+        padding-right: 10px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -70,6 +75,12 @@
       img {
         width: 400px; /* Еще меньше картинка на смартфонах */
         height: 400px;
+      }
+
+      .sentence {
+        font-size: 1rem;
+        padding-left: 5px; /* Еще меньше отступов для маленьких экранов */
+        padding-right: 5px;
       }
     }
 
@@ -90,6 +101,8 @@
       font-size: medium;
       text-shadow: 2px 2px 4px rgba(250, 249, 249, 0.945);
       font-weight: 700;
+      padding-left: 15px; /* Отступ слева */
+      padding-right: 15px; /* Отступ справа */
     }
   </style>
 </head>
