@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js App</title>
+
+  <style>
+    /* Создаем анимацию поворота */
+    @keyframes rotateClockwise {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Стиль для изображения */
+    img {
+      animation: rotateClockwise 10s linear infinite;
+      display: block;
+      margin: 20px auto; /* Центрируем картинку и добавляем отступ */
+      width: 700px; /* Устанавливаем фиксированную ширину */
+      height: 700px; /* Устанавливаем фиксированную высоту для кругляшки */
+      border-radius: 50%; /* Делает картинку круглой */
+      object-fit: cover; /* Обеспечивает обрезку картинки, если она не квадратная */
+    }
+
+    /* Общий стиль для body */
+    body {
+      background-image: url('./3.avif'); /* Указываем путь к картинке */
+      background-size: cover; /* Покрывает весь экран, пропорции сохраняются */
+      background-position: center; /* Центрируем изображение */
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Адаптивные стили для мобильных устройств */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта на мобильных устройствах */
+      }
+
+      img {
+        width: 500px; /* Уменьшаем размер картинки на планшетах */
+        height: 500px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem; /* Еще меньше шрифт на маленьких экранах */
+      }
+
+      img {
+        width: 400px; /* Еще меньше картинка на смартфонах */
+        height: 400px;
+      }
+    }
+
+    /* Контейнер для предложений */
+    .column {
+      display: flex;
+      flex-direction: column; /* Размещение элементов по вертикали */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(1.5px);
+    }
+
+    /* Стиль для каждого предложения */
+    .sentence {
+      font-size: 1.5rem;
+      margin: 10px 0; /* Отступы между предложениями */
+      font-size: medium;
+      text-shadow: 2px 2px 4px rgba(250, 249, 249, 0.945);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="column">
+    <p class="sentence">Как бессонница в час ночной
+      Меняет, нелюдимая, облик твой
+      Чьих невольница ты идей? Зачем тебе охотиться на людей?.</p>
+    <p class="sentence">С тобой я чувствую, что могу всё. Ты — мой самый близкий человек, и я ценю каждое мгновение, проведённое с тобой. Спасибо за твою доброту, терпение и любовь. Ты — самое дорогое, что у меня есть.
+      Я люблю тебя больше слов, и я всегда буду благодарен за то, что ты есть в моей жизни.</p>
+    <p class="sentence">Ты — мой тихий уголок в этом шумном мире.  
+      Спасибо за твою поддержку, за твою веру в меня.  
+      Ты делаешь меня лучше, и я бесконечно благодарен за это.  
+      Я люблю тебя</p>
+    <p class="sentence">Каждый день с тобой — это подарок.  
+      Ты даришь мне тепло, когда мир кажется холодным.  
+      Ты вдохновляешь меня, когда я теряю веру.  
+      Ты — моя опора, моя любовь, моя жизнь.  
+      Спасибо за то, что ты есть.</p>
+
+    <!-- Изображение теперь находится внизу, внутри контейнера .column -->
+    <img src="./1.jpg" alt="Rotating Image" />
+  </div>
+</body>
+</html>
